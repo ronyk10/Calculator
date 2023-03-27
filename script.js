@@ -3,7 +3,8 @@ const touches = [...document.querySelectorAll('.bouton')];  //on va sélect dans
 const listeKeycode = touches.map(touche => touche.dataset.key);//on veut prendre tous les élements du tableau touches, et on récupère leurs data-key. Pour ça, utiliser map()
 const ecran = document.querySelector('.ecran');
 
-document.addEventListener('keydown', (e) => { // lorsque tu vas presser une touche de ton clavier, son keycode sera récupéré et affiché. e = évenement
+document.addEventListener('keydown', (e) => {
+    // lorsque tu vas presser une touche de ton clavier, son keycode sera récupéré et affiché. e = évenement
 
     const valeur = e.keyCode.toString();
     calculer(valeur)
@@ -36,6 +37,6 @@ const calculer = (valeur) => {
     }
 }
 
-window.addEventListener('error', (e) => {
+window.addEventListener('error', (e) => { //cas d'erreur, si on entre n'importe quoi
     alert('Une erreur est survenue dans votre calcul : ' + e.message)
 })
