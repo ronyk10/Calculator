@@ -18,7 +18,7 @@ document.addEventListener('click', (e) => {
 })
 
 const calculer = (valeur) => {
-    if (listeKeycode.includes(valeur)) { //si la touche q'uon entre fait partie de la calculatrice
+    if (listeKeycode.includes(valeur)) { //si la touche qu'on entre fait partie de la calculatrice
         console.log(listeKeycode)
         switch (valeur) {
             case '8': // si on entre la touche C dont le keycode est 8
